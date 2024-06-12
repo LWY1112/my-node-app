@@ -29,20 +29,9 @@ pipeline {
                 sh 'npm run build' // Optional: if you have a build step
             }
         }
-
-        stage('Deploy') {
-            steps {
-                echo 'Deploying the application...'
-                // Add your deployment steps here (e.g., copying files, uploading to a server, etc.)
-            }
-        }
     }
 
     post {
-        always {
-            junit 'reports/**/*.xml' // Optional: if you have JUnit test reports
-            archiveArtifacts artifacts: 'build/**/*', allowEmptyArchive: true
-        }
         success {
             echo 'Pipeline succeeded!'
         }
