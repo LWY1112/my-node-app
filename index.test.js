@@ -8,9 +8,9 @@ app.get('/', (req, res) => {
 });
 
 describe('GET /', () => {
-  it('responds with Hello World', (done) => {
+  it('responds with Hello World!', (done) => {
     request(app)
       .get('/')
-      .expect('Hello World', done);
+      .expect('Hello World!', done);
   });
 });
