@@ -14,19 +14,19 @@ pipeline {
 
         stage('Install dependencies') {
             steps {
-                sh 'npm install'
+                bat 'npm install' // Use 'bat' instead of 'sh' for Windows compatibility
             }
         }
 
         stage('Run tests') {
             steps {
-                sh 'npm test'
+                bat 'npm test' // Use 'bat' instead of 'sh' for Windows compatibility
             }
         }
 
         stage('Build') {
             steps {
-                sh 'npm run build' // Optional: if you have a build step
+                bat 'npm run build' // Use 'bat' instead of 'sh' for Windows compatibility
             }
         }
     }
