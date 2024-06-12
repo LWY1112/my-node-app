@@ -32,10 +32,6 @@ pipeline {
     }
 
     post {
-        always {
-            junit 'reports/**/*.xml' // Optional: if you have JUnit test reports
-            archiveArtifacts artifacts: 'build/**/*', allowEmptyArchive: true
-        }
         success {
             echo 'Pipeline succeeded!'
         }
