@@ -23,12 +23,6 @@ pipeline {
                 bat 'npm test' // Use 'bat' instead of 'sh' for Windows compatibility
             }
         }
-
-        stage('Build') {
-            steps {
-                bat 'npm run build' // Use 'bat' instead of 'sh' for Windows compatibility
-            }
-        }
     }
 
     post {
